@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  my-report-server:
+    image: myreportserver
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:8080

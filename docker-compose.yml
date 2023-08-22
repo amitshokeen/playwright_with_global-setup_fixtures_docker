@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  pwnarrativesqa:
+    image: pwnarrativesqa
+    volumes:
+      - my-volume:/app/playwright-report
+    build:
+      context: ./pw-narratives-qa
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - :9323
+  my-report-server:
+    image: myreportserver
+    volumes:
+      - my-volume:/report
+    build:
+      context: ./my-report-server
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:8080
+volumes:
+  my-volume:
+    external: false
