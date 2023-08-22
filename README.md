@@ -1,1 +1,3 @@
-# playwright_with_global-setup_fixtures_docker
+# Playwright with global-setup (for one time login), POM, fixtures and Docker
+
+
