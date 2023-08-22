@@ -1,7 +1,7 @@
 # Playwright with global-setup (for one time login), POM, fixtures and Docker
 
 The purpose of this project is to demonstrate some useful features of **Playwright** along with **dockerizing** the code and serving the HTML playwright-report with the help of a custom server.
-The **dockerizing** approach is as follows:
+## The **dockerizing** approach is as follows:
 - The **playwright** project (**pw-narratives-qa**) is dockerized using a **Dockerfile**.
 > The docker-compose.yml file present in the pw-narratives-qa is actually not needed. It was used for initial tests/learning.
 - The **my-report-server** is separate from the playwright project and that too is dockerized using a **Dockerfile**
